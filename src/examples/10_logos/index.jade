@@ -1,0 +1,42 @@
+extends ../../layouts/index.jade
+
+block head-title
+    | - animation an object
+
+block styles
+    link(href="style.css", rel="stylesheet")
+    link(href='http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+
+block scripts
+    script(src='main.js')
+
+block content
+    - var logos = []
+    - logos.push({title: "Котенок<br>и собака", src: "img/01.jpg"})
+    - logos.push({title: "Бабочка", src: "img/02.jpg"})
+    - logos.push({title: "Мышонок", src: "img/03.jpg"})
+    - logos.push({title: "Ежик", src: "img/04.jpg"})
+    - logos.push({title: "Волк", src: "img/05.jpg"})
+    - logos.push({title: "Кролик", src: "img/06.jpg"})
+    - logos.push({title: "Сова", src: "img/07.jpg"})
+    - logos.push({title: "Обезьяна", src: "img/08.jpg"})
+    - logos.push({title: "Котенок", src: "img/09.jpg"})
+    - logos.push({title: "Рысь", src: "img/10.jpg"})
+    - logos.push({title: "Белочка", src: "img/11.jpg"})
+    - logos.push({title: "Жираф<br>и страус", src: "img/12.jpg"})
+    - logos.push({title: "Лошадь", src: "img/13.jpg"})
+    - logos.push({title: "Мышь", src: "img/14.jpg"})
+    - logos.push({title: "Хомяк", src: "img/15.jpg"})
+    - logos.push({title: "Кот", src: "img/16.jpg"})
+
+    .Logos
+        ul.Logos-images
+            each logo in logos
+                li.Logos-item
+                    .Logos-image(style="background-image: url(#{logo.src})")
+
+        ul.Logos-covers
+            each logo in logos
+                li.Logos-item
+                    .Logos-cover
+                        .Logos-title!= logo.title

@@ -1,0 +1,44 @@
+doctype html
+html(lang="ru") 
+  head
+    meta(charset="utf-8")
+    title Demos physics
+    link(href="/css/build.min.css", rel="stylesheet")
+    
+  body
+
+    - var listOfExamples = [];
+    - listOfExamples.push({title: 'Движение мячика', link: '/examples/01_movingBall/'})
+    - listOfExamples.push({title: 'Сила трения на мячике', link: '/examples/02_frictionBall/'})
+    - listOfExamples.push({title: 'Горизонтальный скролл', link: '/examples/03_frictionForceHoris/'})
+    - listOfExamples.push({title: 'Добавляем мощности', link: '/examples/05_frictionForceWithArrows/'})
+    - listOfExamples.push({title: 'Ускоряющийся мячик', link: '/examples/06_acceleratingBall/'})
+    - listOfExamples.push({title: 'Прыгающий мячик', link: '/examples/07_bouncingBall/'})
+    - listOfExamples.push({title: 'Прягаем под углом', link: '/examples/07_bouncingBallAngl/'})
+    - listOfExamples.push({title: 'Прягаем от наклонной поверхности мяч', link: '/examples/07_bouncingOffIncludedFloor/'})
+    - listOfExamples.push({title: 'Прыгающая галерея', link: '/examples/08_galleryBouncing/'})
+    - listOfExamples.push({title: 'Мыльные пузыри', link: '/examples/14_bubble/'})
+    - listOfExamples.push({title: 'Пузырики отталкивающиеся', link: '/examples/14_bubbleBouncing/'})
+    - listOfExamples.push({title: 'Колебание затухающее', link: '/examples/09_springDamping/'})
+    - listOfExamples.push({title: 'Логотипы', link: '/examples/10_logos/'})
+    - listOfExamples.push({title: 'Оттягивание окон', link: '/examples/11_windowSpring/'})
+    - listOfExamples.push({title: 'Собирающаяся картинка', link: '/examples/12_movingImage/'})
+    - listOfExamples.push({title: 'Распад', link: '/examples/13_movingObjects/'})
+    
+
+
+    ul.listOfExamples
+      each item in listOfExamples
+        li.listOfExamples__item
+          a.listOfExamples__link(href=item.link)!= item.title
+
+    footer.footer
+        ul.links
+            li.links__item
+                a(href="https://github.com/elena90/physics" class="links__link" target="_blank") Код примеров <span class="links__note">(github)</span>
+            li.links__item
+                a(href="http://presentationphysics.liveldi.ru/" class="links__link" target="_blank") Анимируем объекты с использованием физики в JavaScript <span class="links__note">(pdf)</span>
+            li.links__item
+                a(href="http://www.apress.com/9781430263371" class="links__link" target="_blank") Physics for JavaScript Games, Animation, and Simulations <span class="links__note">(Dev Ramtal, Adrian Dobre)</span>
+            li.links__item
+                a(href="http://iamralpht.github.io/physics/" class="links__link" target="_blank") Creating Animations and Interactions with Physical Models  <span class="links__note">(Ralph Thomas)</span>
