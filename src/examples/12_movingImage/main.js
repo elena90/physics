@@ -30,7 +30,7 @@
                 params.mass = 1;
 
                 this.objs.push(new Obj(params));
-                this.objs[i].pos = new Vector(getRandomInt(-500, 500), getRandomInt(-300, 300));
+                this.objs[i].pos = new Vector(getRandomInt(-4, 4), getRandomInt(-0.1, 0.1));
                 this.objs[i].center = new Vector(0, 0);
                 this.objs[i].datas = newObj;
                 this.objs[i].changeStyles();
@@ -151,10 +151,10 @@
                     top: j * sizeEl,
                     left: i * sizeEl,
                     size: sizeEl,
-                    kSpring: getRandomInt(8, 50) / 10,
-                    kDamping: 0.1
+                    kSpring: getRandomInt(20, 120) / 300,
+                    kDamping: 0.01
                 });
-
+                
                 $container.append($item);
             }
         }
