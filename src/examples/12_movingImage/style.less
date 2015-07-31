@@ -9,16 +9,28 @@ body {
     align-items: center;
     justify-content: center;
     flex-flow: column wrap;
+    background-color: #057540;
 }
 
 .Container {
+    opacity: 0.2;
     position: relative;
     width: 650px;
     height: 500px;
-
+    z-index:100;
     &-item {
         position: absolute;
         background-image: url('img/picture.jpg');
         background-repeat: no-repeat;
     }
+}
+
+.Container2 {
+    position: relative;
+    width: 650px;
+    height: 500px;    
+    top:-500px;
+    z-index:5;
+    background-image: url('img/picture.jpg');
+    background-repeat: no-repeat;
 }
